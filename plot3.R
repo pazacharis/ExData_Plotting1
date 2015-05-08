@@ -12,7 +12,7 @@ data <- read.table(filename,
 )
 
 # Subset the required dates
-twoDays <- subset(data, Date == "1/2/2007" | Date == "2/2/2007")
+twoDays <- subset(data, Date == "1/2/2007" |Date == "2/2/2007")
 
 # Open device png
 png(file = "plot3.png",
@@ -25,7 +25,8 @@ png(file = "plot3.png",
 ylimit <- sort(c(range(twoDays$Sub_metering_1), 
                  range(twoDays$Sub_metering_2), 
                  range(twoDays$Sub_metering_3)), 
-               decreasing = TRUE)
+               decreasing = TRUE
+)
 
 # Keep the largest and smallest value
 ylimit <- c(tail(ylimit, n=1), ylimit[1])
@@ -52,6 +53,7 @@ plot(twoDays$Sub_metering_2,
 
 # Plot for Sub_metering_3
 par(new = TRUE)
+
 plot(twoDays$Sub_metering_3, 
      type="l", 
      ylim=ylimit, 
