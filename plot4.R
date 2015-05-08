@@ -24,7 +24,7 @@ par(mfrow = c(2,2))
 # plot at [1,1]
 plot(twoDays$Global_active_power, 
      type = "l",
-     ylab = "Global Active Power (kilowatts)",
+     ylab = "Global Active Power",
      xaxt="n",
      xlab=""
 )
@@ -90,7 +90,8 @@ legend( x="topright",
         legend=c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"),
         col=c("black","red","blue"), 
         lwd=1, 
-        lty=c(1,1,1)
+        lty=c(1,1,1),
+        bty ="n"
 )
 
 # plot at [2,2]
