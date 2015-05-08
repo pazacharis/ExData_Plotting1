@@ -6,7 +6,7 @@ filename = "household_power_consumption.txt"
 
 # Read data - Warning: Table 2,075,259 by 9
 data <- read.table(filename, 
-                   header = TRUE,??
+                   header = TRUE,
                    sep= ";",
                    na.strings = "?"
 )
